@@ -1,0 +1,2800 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sagar Travels | Holidays, Flights & Hotels</title>
+  <meta name="description"
+    content="Sagar Travels: trusted holiday packages, flights and hotels worldwide. Expert planners, custom quotes and 24/7 support. Call +1 365 655 8265.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0B1B33;
+      --navy-2: #12284A;
+      --blue: #1A66D6;
+      --blue-soft: #E7F1FD;
+      --sky: #8CC4FF;
+      --blue-d: #1257B8;
+      --ink: #16243A;
+      --muted: #5F6E85;
+      --line: #E3E9F2;
+      --bg: #F5F8FC;
+      --white: #fff;
+      --green: #0B1B33;
+      --gold: #1A66D6;
+      --shadow: 0 10px 30px -12px rgba(10, 35, 66, .22);
+      --shadow-lg: 0 30px 60px -24px rgba(10, 35, 66, .35);
+      --r: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, Segoe UI, sans-serif;
+      color: var(--ink);
+      background: #fff;
+      line-height: 1.6;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased
+    }
+
+    img {
+      display: block;
+      max-width: 100%
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    ul {
+      list-style: none
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+      color: inherit
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 2px;
+      border-radius: 6px
+    }
+
+    .wrap {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      line-height: 1.2;
+      color: var(--navy);
+      letter-spacing: -.015em
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 26px;
+      border-radius: 12px;
+      font-weight: 700;
+      border: 0;
+      cursor: pointer;
+      transition: .2s;
+      font-size: .98rem
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: #fff;
+      box-shadow: 0 8px 20px -8px rgba(26, 102, 214, .55)
+    }
+
+    .btn-primary:hover {
+      background: var(--blue-d);
+      transform: translateY(-1px)
+    }
+
+    .btn-blue {
+      background: var(--navy);
+      color: #fff
+    }
+
+    .btn-blue:hover {
+      background: #000
+    }
+
+    .btn-outline {
+      border: 2px solid var(--line);
+      background: #fff;
+      color: var(--navy)
+    }
+
+    .btn-outline:hover {
+      border-color: var(--blue);
+      color: var(--blue)
+    }
+
+    .btn-white {
+      background: #fff;
+      color: var(--navy)
+    }
+
+    .btn-white:hover {
+      background: var(--blue-soft)
+    }
+
+    .btn-sm {
+      padding: 10px 18px;
+      font-size: .9rem;
+      border-radius: 10px
+    }
+
+    /* Top bar */
+    .topbar {
+      background: var(--navy);
+      color: #C9D6EA;
+      font-size: .85rem
+    }
+
+    .topbar .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 40px;
+      gap: 16px
+    }
+
+    .topbar a:hover {
+      color: #fff
+    }
+
+    .topbar .l,
+    .topbar .r {
+      display: flex;
+      gap: 24px;
+      align-items: center
+    }
+
+    .topbar svg {
+      width: 14px;
+      height: 14px;
+      vertical-align: -2px;
+      margin-right: 6px
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #fff;
+      box-shadow: 0 1px 0 var(--line)
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 78px
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    .logo svg {
+      width: 44px;
+      height: 44px;
+      flex: none
+    }
+
+    .logo b {
+      display: block;
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: -.03em;
+      line-height: 1
+    }
+
+    .logo small {
+      display: block;
+      font-size: .68rem;
+      font-weight: 600;
+      color: var(--blue);
+      letter-spacing: .14em;
+      margin-top: 4px
+    }
+
+    .menu {
+      display: flex;
+      gap: 6px;
+      align-items: center
+    }
+
+    .menu a {
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: .96rem;
+      color: var(--ink);
+      transition: .15s
+    }
+
+    .menu a:hover {
+      background: var(--blue-soft);
+      color: var(--blue)
+    }
+
+    .nav-cta {
+      display: flex;
+      gap: 12px;
+      align-items: center
+    }
+
+    .burger {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border: 0;
+      background: var(--bg);
+      border-radius: 10px;
+      cursor: pointer
+    }
+
+    .burger span {
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: var(--navy);
+      margin: 5px auto
+    }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      color: #fff;
+      min-height: 680px;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #0B1B33 0%, #1A55B0 55%, #6FB0F2 100%);
+      overflow: hidden
+    }
+
+    .hero>img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(6, 24, 48, .82) 0%, rgba(6, 24, 48, .55) 48%, rgba(6, 24, 48, .15) 100%)
+    }
+
+    .hero .wrap {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      padding-top: 70px;
+      padding-bottom: 150px
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, .14);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, .28);
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: .88rem;
+      font-weight: 600;
+      margin-bottom: 22px
+    }
+
+    .badge i {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #8CC4FF
+    }
+
+    .hero h1 {
+      color: #fff;
+      font-size: clamp(2.4rem, 5.4vw, 4.4rem);
+      font-weight: 800;
+      max-width: 15em;
+      letter-spacing: -.03em
+    }
+
+    .hero h1 span {
+      color: var(--sky)
+    }
+
+    .hero p {
+      margin: 22px 0 32px;
+      font-size: 1.18rem;
+      max-width: 34em;
+      color: #DCE7F7
+    }
+
+    .hero-points {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+      font-weight: 600;
+      font-size: .95rem
+    }
+
+    .hero-points li {
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    .hero-points svg {
+      width: 20px;
+      height: 20px;
+      color: #8CC4FF
+    }
+
+    /* Search card */
+    .search-wrap {
+      position: relative;
+      z-index: 10;
+      margin-top: -92px
+    }
+
+    .search {
+      background: #fff;
+      border-radius: 22px;
+      box-shadow: var(--shadow-lg);
+      padding: 14px 24px 26px
+    }
+
+    .tabs {
+      display: flex;
+      gap: 6px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 22px;
+      overflow-x: auto
+    }
+
+    .tab {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 16px 20px;
+      background: none;
+      border: 0;
+      border-bottom: 3px solid transparent;
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--muted);
+      white-space: nowrap;
+      margin-bottom: -1px
+    }
+
+    .tab svg {
+      width: 20px;
+      height: 20px
+    }
+
+    .tab[aria-selected="true"] {
+      color: var(--blue);
+      border-color: var(--blue)
+    }
+
+    .tab:hover {
+      color: var(--blue)
+    }
+
+    .sform {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr 1fr auto;
+      gap: 14px;
+      align-items: end
+    }
+
+    .fld label {
+      display: block;
+      font-size: .8rem;
+      font-weight: 700;
+      color: var(--muted);
+      margin-bottom: 6px
+    }
+
+    .fld select,
+    .fld input {
+      width: 100%;
+      height: 54px;
+      padding: 0 16px;
+      border: 1.5px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      font-weight: 600;
+      font-size: .98rem;
+      outline: none;
+      transition: .15s;
+      appearance: none
+    }
+
+    .fld select {
+      background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%235F6E85' stroke-width='2'%3E%3Cpath d='m1 1 5 5 5-5'/%3E%3C/svg%3E") no-repeat right 16px center
+    }
+
+    .fld select:focus,
+    .fld input:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 4px rgba(23, 105, 224, .12)
+    }
+
+    .sform .btn {
+      height: 54px;
+      padding: 0 34px
+    }
+
+    /* Trust strip */
+    .trust {
+      padding: 56px 0 20px
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px
+    }
+
+    .t-item {
+      display: flex;
+      gap: 16px;
+      align-items: center
+    }
+
+    .t-ico {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      display: grid;
+      place-items: center;
+      flex: none
+    }
+
+    .t-ico svg {
+      width: 28px;
+      height: 28px
+    }
+
+    .t-item b {
+      display: block;
+      font-size: 1.5rem;
+      color: var(--navy);
+      line-height: 1.1;
+      font-weight: 800
+    }
+
+    .t-item span {
+      font-size: .92rem;
+      color: var(--muted)
+    }
+
+    /* Sections */
+    section {
+      padding: 84px 0
+    }
+
+    .sec-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 24px;
+      margin-bottom: 40px;
+      flex-wrap: wrap
+    }
+
+    .sec-head .kicker {
+      display: inline-block;
+      color: var(--blue);
+      font-weight: 700;
+      font-size: .9rem;
+      margin-bottom: 8px
+    }
+
+    .sec-head h2 {
+      font-size: clamp(1.9rem, 3.4vw, 2.7rem);
+      font-weight: 800
+    }
+
+    .sec-head p {
+      color: var(--muted);
+      max-width: 32em;
+      margin-top: 10px
+    }
+
+    .pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap
+    }
+
+    .pill {
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: 1.5px solid var(--line);
+      background: #fff;
+      font-weight: 600;
+      font-size: .92rem;
+      cursor: pointer;
+      transition: .15s
+    }
+
+    .pill:hover {
+      border-color: var(--blue);
+      color: var(--blue)
+    }
+
+    .pill[aria-pressed="true"] {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: #fff
+    }
+
+    /* Destination cards */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px
+    }
+
+    .card {
+      background: #fff;
+      border-radius: var(--r);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--line);
+      transition: transform .25s, box-shadow .25s;
+      display: flex;
+      flex-direction: column
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg)
+    }
+
+    .card.hide {
+      display: none
+    }
+
+    .c-img {
+      position: relative;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      background: linear-gradient(135deg, #1A66D6, #6FB0F2)
+    }
+
+    .c-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .6s
+    }
+
+    .card:hover .c-img img {
+      transform: scale(1.06)
+    }
+
+    .c-tag {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: var(--blue);
+      color: #fff;
+      font-size: .76rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 999px
+    }
+
+    .c-tag.green {
+      background: var(--green)
+    }
+
+    .c-heart {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, .95);
+      border: 0;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      color: var(--navy);
+      transition: .15s
+    }
+
+    .c-heart:hover {
+      color: #E5384E
+    }
+
+    .c-heart[aria-pressed="true"] {
+      color: #E5384E
+    }
+
+    .c-heart[aria-pressed="true"] svg {
+      fill: currentColor
+    }
+
+    .c-heart svg {
+      width: 18px;
+      height: 18px
+    }
+
+    .c-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1
+    }
+
+    .c-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: .85rem;
+      color: var(--muted)
+    }
+
+    .rate {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: 700;
+      color: var(--ink)
+    }
+
+    .rate svg {
+      width: 15px;
+      height: 15px;
+      color: var(--gold)
+    }
+
+    .c-body h3 {
+      font-size: 1.25rem;
+      font-weight: 800
+    }
+
+    .c-body p {
+      font-size: .92rem;
+      color: var(--muted);
+      flex: 1
+    }
+
+    .c-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 14px;
+      border-top: 1px solid var(--line)
+    }
+
+    .price small {
+      display: block;
+      font-size: .76rem;
+      color: var(--muted)
+    }
+
+    .price b {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--navy)
+    }
+
+    .price s {
+      font-size: .85rem;
+      color: var(--muted);
+      margin-left: 6px;
+      font-weight: 500
+    }
+
+    /* Offer banner */
+    .offer {
+      padding: 0
+    }
+
+    .offer-box {
+      position: relative;
+      border-radius: 28px;
+      overflow: hidden;
+      background: linear-gradient(110deg, var(--navy) 0%, #123A70 60%, #1A66D6 100%);
+      color: #fff;
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      align-items: center;
+      min-height: 340px
+    }
+
+    .offer-txt {
+      padding: 56px
+    }
+
+    .offer-txt .badge {
+      margin-bottom: 16px;
+      background: rgba(140, 196, 255, .18);
+      border-color: rgba(140, 196, 255, .45);
+      color: #D3E8FF
+    }
+
+    .offer-txt h2 {
+      color: #fff;
+      font-size: clamp(1.9rem, 3.4vw, 2.8rem);
+      font-weight: 800
+    }
+
+    .offer-txt h2 span {
+      color: var(--sky)
+    }
+
+    .offer-txt p {
+      margin: 14px 0 26px;
+      color: #CFDDF3;
+      max-width: 28em
+    }
+
+    .offer-code {
+      display: inline-flex;
+      gap: 12px;
+      align-items: center;
+      margin-left: 14px;
+      font-size: .9rem;
+      color: #CFDDF3
+    }
+
+    .offer-code b {
+      border: 2px dashed rgba(255, 255, 255, .5);
+      padding: 6px 14px;
+      border-radius: 8px;
+      color: #fff;
+      letter-spacing: .1em
+    }
+
+    .offer-img {
+      align-self: stretch;
+      position: relative;
+      background: linear-gradient(135deg, #1A66D6, #6FB0F2);
+      clip-path: ellipse(100% 120% at 100% 50%)
+    }
+
+    .offer-img img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+    }
+
+    /* Packages */
+    .packages {
+      background: var(--bg)
+    }
+
+    .pk-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px
+    }
+
+    .pk {
+      background: #fff;
+      border-radius: var(--r);
+      overflow: hidden;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      transition: .25s
+    }
+
+    .pk:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg)
+    }
+
+    .pk .c-img {
+      aspect-ratio: 16/10
+    }
+
+    .pk-body {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      flex: 1
+    }
+
+    .pk-meta {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-size: .86rem;
+      color: var(--muted);
+      font-weight: 600
+    }
+
+    .pk-meta span {
+      display: flex;
+      align-items: center;
+      gap: 6px
+    }
+
+    .pk-meta svg {
+      width: 16px;
+      height: 16px;
+      color: var(--blue)
+    }
+
+    .pk h3 {
+      font-size: 1.35rem;
+      font-weight: 800
+    }
+
+    .incl {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px
+    }
+
+    .incl li {
+      font-size: .8rem;
+      font-weight: 600;
+      background: var(--blue-soft);
+      color: var(--blue);
+      padding: 5px 12px;
+      border-radius: 999px
+    }
+
+    .pk-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+      padding-top: 18px;
+      border-top: 1px solid var(--line)
+    }
+
+    /* Why */
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center
+    }
+
+    .why-img {
+      position: relative;
+      border-radius: 28px;
+      overflow: hidden;
+      aspect-ratio: 5/6;
+      background: linear-gradient(135deg, #0B1B33, #1A66D6)
+    }
+
+    .why-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover
+    }
+
+    .why-card {
+      position: absolute;
+      left: 24px;
+      bottom: 24px;
+      right: 24px;
+      background: #fff;
+      border-radius: 16px;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: var(--shadow)
+    }
+
+    .why-card .big {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1
+    }
+
+    .why-card span {
+      font-size: .9rem;
+      color: var(--muted);
+      line-height: 1.4
+    }
+
+    .feat {
+      display: grid;
+      gap: 14px;
+      margin-top: 30px
+    }
+
+    .f {
+      display: flex;
+      gap: 18px;
+      padding: 20px;
+      border-radius: var(--r);
+      border: 1px solid var(--line);
+      transition: .2s;
+      background: #fff
+    }
+
+    .f:hover {
+      border-color: var(--blue);
+      box-shadow: var(--shadow);
+      transform: translateX(4px)
+    }
+
+    .f .t-ico {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px
+    }
+
+    .f h3 {
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin-bottom: 2px
+    }
+
+    .f p {
+      font-size: .94rem;
+      color: var(--muted)
+    }
+
+    .why h2 {
+      font-size: clamp(1.9rem, 3.4vw, 2.7rem);
+      font-weight: 800
+    }
+
+    .why .kicker {
+      color: var(--blue);
+      font-weight: 700;
+      font-size: .9rem;
+      display: inline-block;
+      margin-bottom: 8px
+    }
+
+    .why .lead {
+      color: var(--muted);
+      margin-top: 12px;
+      max-width: 34em
+    }
+
+    /* Steps */
+    .steps-sec {
+      background: var(--navy);
+      color: #fff
+    }
+
+    .steps-sec h2 {
+      color: #fff
+    }
+
+    .steps-sec .sec-head p {
+      color: #B9CAE4
+    }
+
+    .steps-sec .kicker {
+      color: #7FB2FF
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      counter-reset: s
+    }
+
+    .st {
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(255, 255, 255, .12);
+      border-radius: var(--r);
+      padding: 28px;
+      position: relative
+    }
+
+    .st::before {
+      counter-increment: s;
+      content: counter(s);
+      display: grid;
+      place-items: center;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: var(--blue);
+      color: #fff;
+      font-weight: 800;
+      margin-bottom: 18px
+    }
+
+    .st h3 {
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin-bottom: 8px
+    }
+
+    .st p {
+      color: #B9CAE4;
+      font-size: .94rem
+    }
+
+    /* Reviews */
+    .rv-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px
+    }
+
+    .rv {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: var(--r);
+      padding: 28px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 16px
+    }
+
+    .stars {
+      display: flex;
+      gap: 3px;
+      color: var(--gold)
+    }
+
+    .stars svg {
+      width: 18px;
+      height: 18px
+    }
+
+    .rv p {
+      color: var(--ink);
+      font-size: 1rem;
+      flex: 1
+    }
+
+    .who {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line)
+    }
+
+    .av {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      font-weight: 700
+    }
+
+    .who b {
+      display: block;
+      line-height: 1.2
+    }
+
+    .who small {
+      color: var(--muted)
+    }
+
+    .verified {
+      margin-left: auto;
+      font-size: .76rem;
+      font-weight: 700;
+      color: var(--blue);
+      background: var(--blue-soft);
+      padding: 4px 10px;
+      border-radius: 999px
+    }
+
+    /* FAQ + contact */
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start
+    }
+
+    details {
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 0 22px;
+      background: #fff;
+      margin-bottom: 12px;
+      transition: .2s
+    }
+
+    details[open] {
+      border-color: var(--blue);
+      box-shadow: var(--shadow)
+    }
+
+    summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 20px 0;
+      font-weight: 700;
+      color: var(--navy);
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center
+    }
+
+    summary::-webkit-details-marker {
+      display: none
+    }
+
+    summary::after {
+      content: "+";
+      font-size: 1.5rem;
+      color: var(--blue);
+      font-weight: 500;
+      line-height: 1
+    }
+
+    details[open] summary::after {
+      content: "–"
+    }
+
+    details p {
+      padding-bottom: 20px;
+      color: var(--muted);
+      font-size: .96rem
+    }
+
+    .contact {
+      background: #fff;
+      border-radius: 24px;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--line);
+      padding: 36px
+    }
+
+    .contact h3 {
+      font-size: 1.6rem;
+      font-weight: 800
+    }
+
+    .contact>p {
+      color: var(--muted);
+      margin: 8px 0 22px
+    }
+
+    .cg {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px
+    }
+
+    .cg .full {
+      grid-column: 1/-1
+    }
+
+    .fld textarea {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1.5px solid var(--line);
+      border-radius: 12px;
+      outline: none;
+      resize: vertical;
+      font-weight: 500
+    }
+
+    .fld textarea:focus {
+      border-color: var(--blue);
+      box-shadow: 0 0 0 4px rgba(23, 105, 224, .12)
+    }
+
+    .fld .req {
+      color: #D33
+    }
+
+    .msg {
+      display: none;
+      margin-top: 14px;
+      padding: 14px 16px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: .94rem
+    }
+
+    .msg.ok {
+      display: block;
+      background: var(--blue-soft);
+      color: #0B3C86
+    }
+
+    .msg.err {
+      display: block;
+      background: #FDECEC;
+      color: #A32020
+    }
+
+    .secure {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .84rem;
+      color: var(--muted);
+      margin-top: 14px
+    }
+
+    .secure svg {
+      width: 16px;
+      height: 16px;
+      color: var(--blue)
+    }
+
+    /* Newsletter */
+    .news {
+      padding: 0 0 84px
+    }
+
+    .news-box {
+      background: var(--blue-soft);
+      border-radius: 24px;
+      padding: 44px 52px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap
+    }
+
+    .news-box h3 {
+      font-size: 1.6rem;
+      font-weight: 800
+    }
+
+    .news-box p {
+      color: var(--muted);
+      margin-top: 4px
+    }
+
+    .news-form {
+      display: flex;
+      gap: 10px;
+      flex: 1;
+      max-width: 480px;
+      min-width: 260px
+    }
+
+    .news-form input {
+      flex: 1;
+      height: 54px;
+      border: 1.5px solid transparent;
+      border-radius: 12px;
+      padding: 0 18px;
+      outline: none;
+      background: #fff;
+      font-weight: 500
+    }
+
+    .news-form input:focus {
+      border-color: var(--blue)
+    }
+
+    /* Footer */
+    footer {
+      background: var(--navy);
+      color: #B9CAE4;
+      padding: 72px 0 28px
+    }
+
+    .foot {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1.2fr;
+      gap: 40px
+    }
+
+    footer .logo b {
+      color: #fff
+    }
+
+    footer .logo small {
+      color: #7FB2FF
+    }
+
+    footer p {
+      margin-top: 16px;
+      font-size: .94rem;
+      max-width: 23em
+    }
+
+    footer h4 {
+      color: #fff;
+      font-size: 1rem;
+      margin-bottom: 16px
+    }
+
+    footer li {
+      margin-bottom: 10px;
+      font-size: .94rem
+    }
+
+    footer a:hover {
+      color: #fff
+    }
+
+    .pay {
+      display: flex;
+      gap: 8px;
+      margin-top: 16px;
+      flex-wrap: wrap
+    }
+
+    .pay span {
+      background: rgba(255, 255, 255, .1);
+      border: 1px solid rgba(255, 255, 255, .16);
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-size: .78rem;
+      font-weight: 700;
+      color: #fff
+    }
+
+    .legal {
+      border-top: 1px solid rgba(255, 255, 255, .14);
+      margin-top: 48px;
+      padding-top: 24px;
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      font-size: .86rem
+    }
+
+
+
+    /* Illustrated fallback behind every photo */
+    .scene {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      z-index: 0
+    }
+
+    .c-img img,
+    .why-img img {
+      position: relative;
+      z-index: 1
+    }
+
+    .c-tag,
+    .c-heart,
+    .why-card {
+      z-index: 2
+    }
+
+    /* Responsive */
+    @media (max-width:1100px) {
+      .cards {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .pk-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .sform {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .sform .btn {
+        grid-column: 1/-1
+      }
+
+      .steps {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .foot {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    @media (max-width:900px) {
+
+      .menu,
+      .nav-cta .btn-outline {
+        display: none
+      }
+
+      .burger {
+        display: block
+      }
+
+      .menu.open {
+        display: flex;
+        position: absolute;
+        top: 78px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 12px 24px 20px;
+        border-bottom: 1px solid var(--line);
+        box-shadow: var(--shadow)
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .why-grid,
+      .faq-grid,
+      .offer-box {
+        grid-template-columns: 1fr
+      }
+
+      .why-img {
+        aspect-ratio: 4/3
+      }
+
+      .rv-grid {
+        grid-template-columns: 1fr
+      }
+
+      .offer-img {
+        min-height: 220px;
+        clip-path: none
+      }
+
+      .offer-txt {
+        padding: 36px 28px
+      }
+
+      .topbar .l span:nth-child(2) {
+        display: none
+      }
+    }
+
+    @media (max-width:640px) {
+      section {
+        padding: 60px 0
+      }
+
+      .topbar .r {
+        display: none
+      }
+
+      .hero {
+        min-height: 600px
+      }
+
+      .hero .wrap {
+        padding-bottom: 130px
+      }
+
+      .cards,
+      .pk-grid,
+      .steps,
+      .sform,
+      .cg {
+        grid-template-columns: 1fr
+      }
+
+      .search {
+        padding: 8px 16px 20px
+      }
+
+      .trust-grid {
+        grid-template-columns: 1fr
+      }
+
+      .foot {
+        grid-template-columns: 1fr
+      }
+
+      .news-box {
+        padding: 30px 24px
+      }
+
+      .news-form {
+        flex-direction: column;
+        max-width: none
+      }
+
+      .nav-cta .btn-primary {
+        display: none
+      }
+
+      .offer-code {
+        margin: 14px 0 0
+      }
+
+      .contact {
+        padding: 24px
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      * {
+        transition: none !important;
+        scroll-behavior: auto !important
+      }
+    }
+
+    /* ---- v4: overflow fixes and responsive polish ---- */
+    html {
+      -webkit-text-size-adjust: 100%
+    }
+
+    body {
+      overflow-x: hidden
+    }
+
+    .c-foot {
+      gap: 12px;
+      align-items: flex-end
+    }
+
+    .c-foot .btn {
+      flex: none
+    }
+
+    .price {
+      min-width: 0
+    }
+
+    .price b {
+      white-space: nowrap
+    }
+
+    .price s {
+      display: block;
+      margin: 0
+    }
+
+    .pk-foot {
+      gap: 12px;
+      flex-wrap: wrap
+    }
+
+    .card,
+    .pk,
+    .rv,
+    .st,
+    .f {
+      min-width: 0
+    }
+
+    @media (min-width:1500px) {
+      .wrap {
+        max-width: 1360px
+      }
+
+      .hero {
+        min-height: 760px
+      }
+
+      .hero h1 {
+        max-width: 14em
+      }
+    }
+
+    @media (max-width:900px) {
+      .sec-head {
+        align-items: flex-start
+      }
+
+      .hero {
+        min-height: 620px
+      }
+
+      .hero .wrap {
+        padding-top: 56px;
+        padding-bottom: 140px
+      }
+
+      .sform .btn {
+        width: 100%
+      }
+
+      .feat .f:hover {
+        transform: none
+      }
+    }
+
+    @media (max-width:640px) {
+      .wrap {
+        padding: 0 18px
+      }
+
+      .topbar .l span {
+        display: none
+      }
+
+      .logo svg {
+        width: 38px;
+        height: 38px
+      }
+
+      .logo b {
+        font-size: 1.2rem
+      }
+
+      .hero {
+        min-height: 600px
+      }
+
+      .hero h1 {
+        font-size: 2.3rem
+      }
+
+      .hero p {
+        font-size: 1.05rem;
+        margin: 16px 0 24px
+      }
+
+      .hero-points {
+        gap: 12px 20px
+      }
+
+      .search-wrap {
+        margin-top: -84px
+      }
+
+      .btn {
+        padding: 13px 20px
+      }
+
+      .sec-head {
+        margin-bottom: 28px
+      }
+
+      .sec-head h2 {
+        font-size: 1.8rem
+      }
+
+      .offer-txt {
+        padding: 30px 22px
+      }
+
+      .offer-code {
+        display: block;
+        margin: 14px 0 0
+      }
+
+      .st,
+      .rv,
+      .contact {
+        padding: 22px
+      }
+
+      .c-body {
+        padding: 18px
+      }
+
+      .why-card {
+        left: 14px;
+        right: 14px;
+        bottom: 14px;
+        padding: 14px 16px
+      }
+
+      .why-card .big {
+        font-size: 1.8rem
+      }
+
+      .legal {
+        flex-direction: column
+      }
+    }
+
+    @media (max-width:380px) {
+      .hero h1 {
+        font-size: 2rem
+      }
+
+      .tab {
+        padding: 14px 12px
+      }
+
+      .sec-head h2 {
+        font-size: 1.6rem
+      }
+
+      .c-foot {
+        flex-wrap: wrap
+      }
+    }
+
+    @media (pointer:coarse) {
+      .c-heart {
+        width: 44px;
+        height: 44px
+      }
+
+      .pill {
+        padding: 12px 20px
+      }
+
+      .menu a {
+        padding: 14px 16px
+      }
+
+      .fld select,
+      .fld input {
+        font-size: 16px
+      }
+    }
+
+    @media (hover:none) {
+
+      .card:hover,
+      .pk:hover,
+      .f:hover {
+        transform: none
+      }
+
+      .card:hover .c-img img {
+        transform: none
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-star" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z" />
+    </symbol>
+    <symbol id="i-check" viewBox="0 0 24 24">
+      <path fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"
+        d="M5 12.5l4.5 4.5L19 7.5" />
+    </symbol>
+
+    <defs>
+      <linearGradient id="gSky" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#6FB0F2" />
+        <stop offset="1" stop-color="#E6F1FD" />
+      </linearGradient>
+      <linearGradient id="gSea" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#2D7FE0" />
+        <stop offset="1" stop-color="#0F4DA8" />
+      </linearGradient>
+      <linearGradient id="gDusk" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0" stop-color="#0B1B33" />
+        <stop offset=".55" stop-color="#2B5FA8" />
+        <stop offset="1" stop-color="#A9D0F8" />
+      </linearGradient>
+    </defs>
+    <symbol id="sc-beach" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+      <rect width="400" height="300" fill="url(#gSky)" />
+      <circle cx="285" cy="95" r="38" fill="#fff" opacity=".9" />
+      <rect y="150" width="400" height="150" fill="url(#gSea)" />
+      <path d="M0 175q50-12 100 0t100 0 100 0 100 0v6q-50 12-100 0t-100 0-100 0-100 0z" fill="#fff" opacity=".25" />
+      <path d="M0 215q50-12 100 0t100 0 100 0 100 0v8q-50 12-100 0t-100 0-100 0-100 0z" fill="#fff" opacity=".18" />
+      <path d="M0 262q120-34 240-8t160-12v58H0z" fill="#EEF5FF" />
+      <path d="M70 262c4-60 8-100 22-150" stroke="#0B1B33" stroke-width="7" fill="none" stroke-linecap="round" />
+      <path
+        d="M92 112c-30-22-58-14-76 6 28-8 50-4 76-6zm0 0c24-26 54-24 76-6-26-2-52 0-76 6zm0 0c-10-30 4-52 22-66-6 24-8 44-22 66zm0 0c-4-26-26-40-50-42 20 12 34 26 50 42z"
+        fill="#0B1B33" />
+    </symbol>
+    <symbol id="sc-island" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+      <rect width="400" height="300" fill="url(#gSky)" />
+      <circle cx="90" cy="90" r="34" fill="#fff" opacity=".9" />
+      <rect y="160" width="400" height="140" fill="url(#gSea)" />
+      <path d="M0 190q50-10 100 0t100 0 100 0 100 0v6q-50 10-100 0t-100 0-100 0-100 0z" fill="#fff" opacity=".22" />
+      <ellipse cx="250" cy="162" rx="150" ry="12" fill="#EEF5FF" />
+      <g fill="#0B1B33">
+        <path d="M205 150l30-22 30 22z" />
+        <rect x="210" y="150" width="50" height="10" />
+        <path d="M285 154l22-16 22 16z" />
+        <rect x="288" y="154" width="38" height="8" />
+      </g>
+      <g fill="#0B1B33">
+        <path d="M40 232l34-24 34 24z" />
+        <rect x="46" y="232" width="56" height="12" />
+        <path d="M150 252l34-24 34 24z" />
+        <rect x="156" y="252" width="56" height="12" />
+      </g>
+      <path d="M100 244h60M214 264h70" stroke="#0B1B33" stroke-width="4" />
+    </symbol>
+    <symbol id="sc-mountain" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+      <rect width="400" height="300" fill="url(#gDusk)" />
+      <circle cx="90" cy="150" r="46" fill="#fff" opacity=".35" />
+      <polygon points="0,220 90,110 150,170 230,70 330,190 400,140 400,300 0,300" fill="#3A6DB3" />
+      <polygon points="230,70 205,108 222,100 232,116 246,98 262,106" fill="#fff" />
+      <polygon points="90,110 72,138 88,130 98,142 112,128" fill="#fff" />
+      <polygon points="0,262 70,196 140,250 210,204 300,262 400,214 400,300 0,300" fill="#0B1B33" />
+    </symbol>
+    <symbol id="sc-city" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+      <rect width="400" height="300" fill="url(#gDusk)" />
+      <g fill="#fff" opacity=".8">
+        <circle cx="50" cy="40" r="1.6" />
+        <circle cx="140" cy="62" r="1.6" />
+        <circle cx="330" cy="36" r="1.6" />
+        <circle cx="370" cy="84" r="1.6" />
+        <circle cx="260" cy="58" r="1.6" />
+      </g>
+      <g fill="#0B1B33">
+        <rect x="20" y="170" width="40" height="130" />
+        <rect x="66" y="140" width="34" height="160" />
+        <rect x="120" y="190" width="50" height="110" />
+        <path d="M196 300V100l4-70 4 70v200z" />
+        <path d="M180 300V150h40v150z" />
+        <rect x="236" y="160" width="44" height="140" />
+        <rect x="290" y="128" width="38" height="172" />
+        <rect x="336" y="185" width="50" height="115" />
+      </g>
+      <path
+        d="M28 185v105M40 185v105M50 185v105M74 155v135M86 155v135M244 175v115M256 175v115M268 175v115M298 145v145M310 145v145"
+        stroke="#8CC4FF" stroke-width="3" stroke-dasharray="4 9" opacity=".7" />
+    </symbol>
+    <symbol id="sc-temple" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice">
+      <rect width="400" height="300" fill="url(#gSky)" />
+      <circle cx="310" cy="80" r="34" fill="#fff" opacity=".9" />
+      <path d="M0 190q100-40 200-10t200-20v140H0z" fill="#5E94D8" />
+      <path d="M0 225q100-40 200-10t200-20v105H0z" fill="#2F6BC0" />
+      <path d="M0 262q120-34 240-8t160-12v58H0z" fill="#0F4DA8" />
+      <g fill="#0B1B33">
+        <path d="M150 240V170l8-10 8 10 8-14 8 14 8-6v76z" />
+        <path d="M216 240V164l8 6 8-14 8 14 8-10 8 10v70z" />
+      </g>
+    </symbol>
+  </svg>
+
+  <div class="topbar">
+    <div class="wrap">
+      <div class="l">
+        <a href="tel:+13656558265"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path
+              d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z" />
+          </svg>+1 365 655 8265</a>
+        <span><a href="mailto:hello@sagartravels.example">hello@sagartravels.example</a></span>
+      </div>
+      <div class="r"><span>Open Mon to Sat, 9 am to 8 pm</span><a href="#faq">Help centre</a></div>
+    </div>
+  </div>
+
+  <header>
+    <div class="wrap nav">
+      <a href="#top" class="logo" aria-label="Sagar Travels home">
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <defs>
+            <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#1A66D6" />
+              <stop offset="1" stop-color="#0B1B33" />
+            </linearGradient>
+          </defs>
+          <rect width="48" height="48" rx="14" fill="url(#lg)" />
+          <circle cx="24" cy="24" r="13" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="1.5" />
+          <ellipse cx="24" cy="24" rx="5.5" ry="13" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="1.5" />
+          <path d="M12 24h24" stroke="#fff" stroke-opacity=".35" stroke-width="1.5" />
+          <path d="M33.5 13.5L27 29l-3-5-5-3 14.5-7.5z" fill="#BFE0FF" />
+          <path d="M27 29l-1.2 5.5-2.8-5.5" fill="#fff" fill-opacity=".9" />
+        </svg>
+        <span><b>Sagar</b><small>TRAVELS</small></span>
+      </a>
+      <nav class="menu" id="menu" aria-label="Main">
+        <a href="#destinations">Destinations</a>
+        <a href="#packages">Packages</a>
+        <a href="#offers">Offers</a>
+        <a href="#why">Why Sagar</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="tel:+13656558265" class="btn btn-outline btn-sm">Call +1 365 655 8265</a>
+        <a href="#contact" class="btn btn-primary btn-sm">Get a free quote</a>
+        <button class="burger" aria-label="Open menu" aria-expanded="false"
+          aria-controls="menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- HERO -->
+    <section class="hero" style="padding:0">
+      <svg class="scene" aria-hidden="true">
+        <use href="#sc-beach" />
+      </svg><img
+        src="https://cdn.magicdecor.in/com/2024/06/07155849/Travel-Bucket-List-Wallpaper-Mural-for-Wall-710x488.jpg"
+        data-fb="https://loremflickr.com/1600/900/beach?lock=21" alt="" fetchpriority="high"
+        onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.dataset.fb=''}else{this.remove()}">
+      <div class="wrap">
+        <span class="badge"><i></i>Rated 4.8/5 by 12,000+ travellers</span>
+        <h1>Explore the world with <span>experts</span> who plan every detail</h1>
+        <p>Holiday packages, flights and hotels with a dedicated travel advisor and 24/7 support
+          from booking to return.</p>
+        <ul class="hero-points">
+          <li><svg>
+              <use href="#i-check" />
+            </svg>No hidden charges</li>
+          <li><svg>
+              <use href="#i-check" />
+            </svg>Free itinerary changes</li>
+          <li><svg>
+              <use href="#i-check" />
+            </svg>Secure payments</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SEARCH -->
+    <div class="search-wrap">
+      <div class="wrap">
+        <div class="search">
+          <div class="tabs" role="tablist" aria-label="Search type">
+            <button class="tab" role="tab" aria-selected="true" data-t="holiday"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17.5 19H9a7 7 0 1 1 6.7-9h1.8a4.5 4.5 0 1 1 0 9z" />
+              </svg>Holidays</button>
+            <button class="tab" role="tab" aria-selected="false" data-t="flight"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z" />
+              </svg>Flights</button>
+            <button class="tab" role="tab" aria-selected="false" data-t="hotel"><svg viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M3 21V7a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v14M15 11h4a2 2 0 0 1 2 2v8M3 21h18M8 9h2M8 13h2M8 17h2" />
+              </svg>Hotels</button>
+          </div>
+          <form class="sform" id="quick">
+            <div class="fld"><label for="s-from" id="l-from">Travelling from</label>
+              <select id="s-from">
+                <option>Delhi</option>
+                <option>Mumbai</option>
+                <option>Bengaluru</option>
+                <option>Kolkata</option>
+                <option>Chennai</option>
+                <option>Hyderabad</option>
+                <option>Lucknow</option>
+              </select>
+            </div>
+            <div class="fld"><label for="s-to" id="l-to">Going to</label>
+              <select id="s-to">
+                <option>Bali</option>
+                <option>Dubai</option>
+                <option>Maldives</option>
+                <option>Thailand</option>
+                <option>Switzerland</option>
+                <option>Japan</option>
+                <option>Greece</option>
+                <option>Ladakh</option>
+              </select>
+            </div>
+            <div class="fld"><label for="s-date" id="l-date">Departure</label><input id="s-date" type="date"></div>
+            <div class="fld"><label for="s-pax">Travellers</label>
+              <select id="s-pax">
+                <option>1 Adult</option>
+                <option selected>2 Adults</option>
+                <option>2 Adults, 1 Child</option>
+                <option>2 Adults, 2 Children</option>
+                <option>5+ Group</option>
+              </select>
+            </div>
+            <button class="btn btn-primary" type="submit" id="s-btn">Search holidays</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- TRUST -->
+    <div class="trust">
+      <div class="wrap trust-grid">
+        <div class="t-item">
+          <div class="t-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8" />
+            </svg></div>
+          <div><b>1.2 lakh+</b><span>Happy travellers</span></div>
+        </div>
+        <div class="t-item">
+          <div class="t-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z" />
+            </svg></div>
+          <div><b>60+</b><span>Destinations worldwide</span></div>
+        </div>
+        <div class="t-item">
+          <div class="t-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <path d="m9 12 2 2 4-4" />
+            </svg></div>
+          <div><b>IATA accredited</b><span>Licensed and insured</span></div>
+        </div>
+        <div class="t-item">
+          <div class="t-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+              <path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z" />
+            </svg></div>
+          <div><b>24/7 support</b><span>Before and during your trip</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESTINATIONS -->
+    <section id="destinations">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <span class="kicker">Top destinations</span>
+            <h2>Popular holidays this season</h2>
+            <p>Hand-picked trips with flights, hotels, transfers and sightseeing included. Request a quote today.</p>
+          </div>
+          <div class="pills" role="group" aria-label="Filter destinations">
+            <button class="pill" aria-pressed="true" data-f="all">All</button>
+            <button class="pill" aria-pressed="false" data-f="beach">Beach</button>
+            <button class="pill" aria-pressed="false" data-f="city">City</button>
+            <button class="pill" aria-pressed="false" data-f="mountain">Mountains</button>
+            <button class="pill" aria-pressed="false" data-f="luxury">Luxury</button>
+          </div>
+        </div>
+        <div class="cards">
+          <article class="card" data-t="beach luxury">
+            <div class="c-img"><svg class="scene" aria-hidden="true">
+                <use href="#sc-temple" />
+              </svg><img loading="lazy"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-z6DJrK9jT7znv2pq3wjHeRmwOijzfND4jQPGa_wi-q7dTUD8CXnMhPU&s=10"
+                data-fb="https://loremflickr.com/900/675/bali?lock=11" alt="Rice terraces in Bali"
+                onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.dataset.fb=''}else{this.remove()}"><span
+                class="c-tag">Bestseller</span><button class="c-heart" aria-label="Save Bali" aria-pressed="false"><svg
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z" />
+                </svg></button></div>
+            <div class="c-body">
+              <div class="c-top"><span>6 nights / 7 days</span><span class="rate"><svg>
+                    <use href="#i-star" />
+                  </svg>4.9</span></div>
+              <h3>Bali, Indonesia</h3>
+              <p>Ubud villas, cliff temples and beach clubs with a private driver.</p>
+              <div class="c-foot">
+                <div class="price"><small>Request a quote</small><b><a href="tel:+13656558265"
+                      style="color:var(--navy);font-size:1.05rem;text-decoration:none">+1 365 655 8265</a></b></div><a
+                  href="#contact" class="btn btn-blue btn-sm" data-dest="Bali">Enquire</a>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-t="beach luxury">
+            <div class="c-img"><svg class="scene" aria-hidden="true">
+                <use href="#sc-island" />
+              </svg><img loading="lazy"
+                src="https://www.sunsiyam.com/media/qnfnzgmq/ssiv_general_04.jpg?width=782&height=521&mode=max"
+                data-fb="https://loremflickr.com/900/675/maldives?lock=12" alt="Overwater villas in the Maldives"
+                onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.dataset.fb=''}else{this.remove()}"><span
+                class="c-tag">Luxury pick</span><button class="c-heart" aria-label="Save Maldives"
+                aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z" />
+                </svg></button></div>
+            <div class="c-body">
+              <div class="c-top"><span>4 nights / 5 days</span><span class="rate"><svg>
+                    <use href="#i-star" />
+                  </svg>4.9</span></div>
+              <h3>Maldives</h3>
+              <p>Overwater villa, seaplane transfers and a sunset dolphin cruise.</p>
+              <div class="c-foot">
+                <div class="price"><small>Request a quote</small><b><a href="tel:+13656558265"
+                      style="color:var(--navy);font-size:1.05rem;text-decoration:none">+1 365 655 8265</a></b></div><a
+                  href="#contact" class="btn btn-blue btn-sm" data-dest="Maldives">Enquire</a>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-t="city">
+            <div class="c-img"><svg class="scene" aria-hidden="true">
+                <use href="#sc-city" />
+              </svg><img loading="lazy"
+                src="https://assets.voxcity.com/uploads/blog_images/why%20dubai%20is%20the%20perfect%20destination%20for%20every%20traveler_original.jpg"
+                data-fb="https://loremflickr.com/900/675/dubai?lock=13" alt="Dubai skyline at dusk"
+                onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.dataset.fb=''}else{this.remove()}"><span
+                class="c-tag green">Visa in 3 days</span><button class="c-heart" aria-label="Save Dubai"
+                aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z" />
+                </svg></button></div>
+            <div class="c-body">
+              <div class="c-top"><span>4 nights / 5 days</span><span class="rate"><svg>
+                    <use href="#i-star" />
+                  </svg>4.8</span></div>
+              <h3>Dubai, UAE</h3>
+              <p>Burj Khalifa, desert safari, marina cruise and a free-day shopping pass.</p>
+              <div class="c-foot">
+                <div class="price"><small>Request a quote</small><b><a href="tel:+13656558265"
+                      style="color:var(--navy);font-size:1.05rem;text-decoration:none">+1 365 655 8265</a></b></div><a
+                  href="#contact" class="btn btn-blue btn-sm" data-dest="Dubai">Enquire</a>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-t="beach city">
+            <div class="c-img"><svg class="scene" aria-hidden="true">
+                <use href="#sc-beach" />
+              </svg><img loading="lazy"
+                src="https://img.magnific.com/free-photo/landmark-pagoda-doi-inthanon-national-park-chiang-mai-thailand_335224-779.jpg?semt=ais_hybrid&w=740&q=80"
+                data-fb="https://loremflickr.com/900/675/thailand?lock=14" alt="Longtail boats on a Thai beach"
+                onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.dataset.fb=''}else{this.remove()}"><span
+                class="c-tag">Great value</span><button class="c-heart" aria-label="Save Thailand"
+                aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z" />
+                </svg></button></div>
+            <div class="c-body">
+              <div class="c-top"><span>5 nights / 6 days</span><span class="rate"><svg>
+                    <use href="#i-star" />
+                  </svg>4.7</span></div>
+              <h3>Thailand</h3>
+              <p>Bangkok and Phuket with island hopping at Phi Phi and James Bond Island.</p>
+              <div class="c-foot">
+                <div class="price"><small>Request a quote</small><b><a href="tel:+13656558265"
+                      style="color:var(--navy);font-size:1.05rem;text-decoration:none">+1 365 655 8265</a></b></div><a
+                  href="#contact" class="btn btn-blue btn-sm" data-dest="Thailand">Enquire</a>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-t="mountain luxury">
+            <div class="c-img"><svg class="scene" aria-hidden="true">
+                <use href="#sc-mountain" />
+              </svg><img loading="lazy"
+                src="https://res.cloudinary.com/dqsqogllc/image/upload/c_limit,w_1440,q_95,f_auto/scl_swiss_alps_switzerland_001_3000x1500_fa1f809c9f21_a5322cf159.webp"
+                data-fb="https://loremflickr.com/900/675/switzerland?lock=15" alt="Swiss village beside an alpine lake"
+                onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.dataset.fb=''}else{this.remove()}"><span
+                class="c-tag">Scenic rail</span><button class="c-heart" aria-label="Save Switzerland"
+                aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z" />
+                </svg></button></div>
+            <div class="c-body">
+              <div class="c-top"><span>6 nights / 7 days</span><span class="rate"><svg>
+                    <use href="#i-star" />
+                  </svg>4.9</span></div>
+              <h3>Switzerland</h3>
+              <p>Lucerne, Interlaken and Zermatt linked by the Swiss Travel Pass.</p>
+              <div class="c-foot">
+                <div class="price"><small>Request a quote</small><b><a href="tel:+13656558265"
+                      style="color:var(--navy);font-size:1.05rem;text-decoration:none">+1 365 655 8265</a></b></div><a
+                  href="#contact" class="btn btn-blue btn-sm" data-dest="Switzerland">Enquire</a>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-t="city">
+            <div class="c-img"><svg class="scene" aria-hidden="true">
+                <use href="#sc-temple" />
+              </svg><img loading="lazy" src="https://img.cnt.traveloka.com/tvlk/dam/i/01k115mk5seyeqt18qaevr7kr0.jpeg"
+                data-fb="https://loremflickr.com/900/675/kyoto?lock=16" alt="Pagoda and street in Kyoto"
+                onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.dataset.fb=''}else{this.remove()}"><span
+                class="c-tag">Cherry blossom</span><button class="c-heart" aria-label="Save Japan"
+                aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z" />
+                </svg></button></div>
+            <div class="c-body">
+              <div class="c-top"><span>7 nights / 8 days</span><span class="rate"><svg>
+                    <use href="#i-star" />
+                  </svg>4.9</span></div>
+              <h3>Japan</h3>
+              <p>Tokyo, Kyoto and Osaka with a rail pass, ryokan night and food walks.</p>
+              <div class="c-foot">
+                <div class="price"><small>Request a quote</small><b><a href="tel:+13656558265"
+                      style="color:var(--navy);font-size:1.05rem;text-decoration:none">+1 365 655 8265</a></b></div><a
+                  href="#contact" class="btn btn-blue btn-sm" data-dest="Japan">Enquire</a>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-t="beach luxury">
+            <div class="c-img"><svg class="scene" aria-hidden="true">
+                <use href="#sc-island" />
+              </svg><img loading="lazy"
+                src="https://images.ctfassets.net/wv75stsetqy3/18jOEJrhKM7WA81nkCKZV8/6f70df258ed1233d5c3a8e3f01298b06/Greece.jpg?q=60&fit=fill&fm=webp"
+                data-fb="https://loremflickr.com/900/675/santorini?lock=17" alt="White buildings of Santorini"
+                onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.dataset.fb=''}else{this.remove()}"><span
+                class="c-tag">Scenic getaway</span><button class="c-heart" aria-label="Save Greece"
+                aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z" />
+                </svg></button></div>
+            <div class="c-body">
+              <div class="c-top"><span>6 nights / 7 days</span><span class="rate"><svg>
+                    <use href="#i-star" />
+                  </svg>4.8</span></div>
+              <h3>Greece</h3>
+              <p>Athens and Santorini with a caldera sunset cruise and wine tasting.</p>
+              <div class="c-foot">
+                <div class="price"><small>Request a quote</small><b><a href="tel:+13656558265"
+                      style="color:var(--navy);font-size:1.05rem;text-decoration:none">+1 365 655 8265</a></b></div><a
+                  href="#contact" class="btn btn-blue btn-sm" data-dest="Greece">Enquire</a>
+              </div>
+            </div>
+          </article>
+          <article class="card" data-t="mountain">
+            <div class="c-img"><svg class="scene" aria-hidden="true">
+                <use href="#sc-mountain" />
+              </svg><img loading="lazy"
+                src="https://go4explore.com/_next/image?url=https%3A%2F%2Fd2qa7a8q0vuocm.cloudfront.net%2Fimages%2F1790235046509-1790235044941_tp5xnl_Prayer-Flags-Over-a-Turquoise-Alpine-Lake.webp&w=3840&q=75"
+                data-fb="https://loremflickr.com/900/675/ladakh?lock=18" alt="Snow-capped mountains at sunrise"
+                onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.dataset.fb=''}else{this.remove()}"><span
+                class="c-tag">Small group</span><button class="c-heart" aria-label="Save Ladakh"
+                aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z" />
+                </svg></button></div>
+            <div class="c-body">
+              <div class="c-top"><span>7 nights / 8 days</span><span class="rate"><svg>
+                    <use href="#i-star" />
+                  </svg>4.8</span></div>
+              <h3>Ladakh, India</h3>
+              <p>Pangong, Nubra and monastery stays with oxygen kit and permits sorted.</p>
+              <div class="c-foot">
+                <div class="price"><small>Request a quote</small><b><a href="tel:+13656558265"
+                      style="color:var(--navy);font-size:1.05rem;text-decoration:none">+1 365 655 8265</a></b></div><a
+                  href="#contact" class="btn btn-blue btn-sm" data-dest="Ladakh">Enquire</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- OFFER -->
+    <section class="offer" id="offers">
+      <div class="wrap">
+        <div class="offer-box">
+          <div class="offer-txt">
+            <span class="badge">Special Offer</span>
+            <h2>Plan early & get <span>custom curated</span> itineraries</h2>
+            <p>Lock in winter and summer 2027 holidays now. Call our experts for a personalized instant quote.</p>
+            <a href="tel:+13656558265" class="btn btn-primary">Call +1 365 655 8265</a>
+            <span class="offer-code">Quote Hotline: <b>+1 365 655 8265</b></span>
+          </div>
+          <div class="offer-img"><svg class="scene" aria-hidden="true">
+              <use href="#sc-beach" />
+            </svg><img loading="lazy"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQK-W4s3iG0y78rGQgpOp3lMDCfhqlp8_qr7iCjHoqPQghyhdyn9U8_HzUX&s=10"
+              data-fb="https://loremflickr.com/900/700/beach,palm?lock=22" alt="Tropical beach with palm trees"
+              onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.dataset.fb=''}else{this.remove()}"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PACKAGES -->
+    <section class="packages" id="packages" style="margin-top:84px">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <span class="kicker">Curated packages</span>
+            <h2>Ready-to-book itineraries</h2>
+            <p>Every package can be customised. Change hotels, add days or upgrade flights and we re-quote the same day.
+            </p>
+          </div>
+          <a href="tel:+13656558265" class="btn btn-outline">Call for quote: +1 365 655 8265</a>
+        </div>
+        <div class="pk-grid">
+          <article class="pk">
+            <div class="c-img"><svg class="scene" aria-hidden="true">
+                <use href="#sc-temple" />
+              </svg><img loading="lazy"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-z6DJrK9jT7znv2pq3wjHeRmwOijzfND4jQPGa_wi-q7dTUD8CXnMhPU&s=10"
+                data-fb="https://loremflickr.com/900/675/bali?lock=11" alt="Bali"
+                onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.dataset.fb=''}else{this.remove()}"><span
+                class="c-tag">Popular</span></div>
+            <div class="pk-body">
+              <div class="pk-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l4 2" />
+                  </svg>7 days</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>Ubud, Uluwatu, Seminyak</span></div>
+              <h3>Bali Slow Escape</h3>
+              <ul class="incl">
+                <li>Flights</li>
+                <li>4-star stays</li>
+                <li>Breakfast</li>
+                <li>Private transfers</li>
+                <li>3 tours</li>
+              </ul>
+              <div class="pk-foot">
+                <div class="price"><small>Request a quote</small><b><a href="tel:+13656558265"
+                      style="color:var(--navy);font-size:1.05rem;text-decoration:none">+1 365 655 8265</a></b></div><a
+                  href="#contact" class="btn btn-primary btn-sm" data-dest="Bali">Get quote</a>
+              </div>
+            </div>
+          </article>
+          <article class="pk">
+            <div class="c-img"><svg class="scene" aria-hidden="true">
+                <use href="#sc-city" />
+              </svg><img loading="lazy"
+                src="https://assets.voxcity.com/uploads/blog_images/why%20dubai%20is%20the%20perfect%20destination%20for%20every%20traveler_original.jpg"
+                data-fb="https://loremflickr.com/900/675/dubai?lock=13" alt="Dubai"
+                onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.dataset.fb=''}else{this.remove()}"><span
+                class="c-tag green">Family friendly</span></div>
+            <div class="pk-body">
+              <div class="pk-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l4 2" />
+                  </svg>5 days</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>Dubai, Abu Dhabi</span></div>
+              <h3>Dubai Highlights</h3>
+              <ul class="incl">
+                <li>Flights</li>
+                <li>Visa</li>
+                <li>Desert safari</li>
+                <li>Burj Khalifa</li>
+                <li>Breakfast</li>
+              </ul>
+              <div class="pk-foot">
+                <div class="price"><small>Request a quote</small><b><a href="tel:+13656558265"
+                      style="color:var(--navy);font-size:1.05rem;text-decoration:none">+1 365 655 8265</a></b></div><a
+                  href="#contact" class="btn btn-primary btn-sm" data-dest="Dubai">Get quote</a>
+              </div>
+            </div>
+          </article>
+          <article class="pk">
+            <div class="c-img"><svg class="scene" aria-hidden="true">
+                <use href="#sc-mountain" />
+              </svg><img loading="lazy"
+                src="https://res.cloudinary.com/dqsqogllc/image/upload/c_limit,w_1440,q_95,f_auto/scl_swiss_alps_switzerland_001_3000x1500_fa1f809c9f21_a5322cf159.webp"
+                data-fb="https://loremflickr.com/900/675/switzerland?lock=15" alt="Switzerland"
+                onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.dataset.fb=''}else{this.remove()}"><span
+                class="c-tag">Premium</span></div>
+            <div class="pk-body">
+              <div class="pk-meta"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="M12 6v6l4 2" />
+                  </svg>7 days</span><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                    <circle cx="12" cy="10" r="3" />
+                  </svg>Lucerne, Interlaken, Zermatt</span></div>
+              <h3>Swiss Alps by Rail</h3>
+              <ul class="incl">
+                <li>Flights</li>
+                <li>Swiss Travel Pass</li>
+                <li>Schengen visa help</li>
+                <li>Breakfast</li>
+              </ul>
+              <div class="pk-foot">
+                <div class="price"><small>Request a quote</small><b><a href="tel:+13656558265"
+                      style="color:var(--navy);font-size:1.05rem;text-decoration:none">+1 365 655 8265</a></b></div><a
+                  href="#contact" class="btn btn-primary btn-sm" data-dest="Switzerland">Get quote</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="why" id="why">
+      <div class="wrap why-grid">
+        <div class="why-img">
+          <svg class="scene" aria-hidden="true">
+            <use href="#sc-mountain" />
+          </svg><img loading="lazy"
+            src="https://media.istockphoto.com/id/2181897872/vector/travel-collage.jpg?s=612x612&w=0&k=20&c=JNhZYF51poIMlgHw_XbVjGmugqrydE7_gEcH1uWueqI="
+            data-fb="https://loremflickr.com/900/1080/travel?lock=23" alt="Traveller with a map planning a trip"
+            onerror="if(this.dataset.fb){this.src=this.dataset.fb;this.dataset.fb=''}else{this.remove()}">
+          <div class="why-card">
+            <div class="big">98%</div><span>of travellers would book with Sagar Travels again or recommend us to a
+              friend.</span>
+          </div>
+        </div>
+        <div>
+          <span class="kicker">Why Sagar Travels</span>
+          <h2>Travel is personal. Your planner should be too.</h2>
+          <p class="lead">We combine the buying power of a large agency with the attention of a boutique one.</p>
+          <div class="feat">
+            <div class="f">
+              <div class="t-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                  <circle cx="12" cy="7" r="4" />
+                </svg></div>
+              <div>
+                <h3>A dedicated travel advisor</h3>
+                <p>One named expert plans your trip and stays reachable throughout.</p>
+              </div>
+            </div>
+            <div class="f">
+              <div class="t-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="1" x2="12" y2="23" />
+                  <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                </svg></div>
+              <div>
+                <h3>Custom tailored quotes</h3>
+                <p>Taxes, transfers and entry details are fully outlined in your custom quote. No surprise charges
+                  later.</p>
+              </div>
+            </div>
+            <div class="f">
+              <div class="t-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg></div>
+              <div>
+                <h3>Protected bookings</h3>
+                <p>Secure payments, instant e-tickets and rebooking help if plans change.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEPS -->
+    <section class="steps-sec" id="process">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <span class="kicker">How it works</span>
+            <h2>Book your trip in four simple steps</h2>
+            <p>Start with a quick call or a message. You can stop at any step.</p>
+          </div>
+        </div>
+        <div class="steps">
+          <div class="st">
+            <h3>Share your plan</h3>
+            <p>Tell us where, when and your budget. It takes two minutes.</p>
+          </div>
+          <div class="st">
+            <h3>Get your itinerary</h3>
+            <p>Receive a day-by-day plan with hotels and your personalized quote within 24 hours.</p>
+          </div>
+          <div class="st">
+            <h3>Customise and confirm</h3>
+            <p>Adjust anything, then pay 25% to confirm your flights and stays.</p>
+          </div>
+          <div class="st">
+            <h3>Travel stress-free</h3>
+            <p>E-tickets, vouchers and 24/7 on-trip support from our team.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <span class="kicker">Customer stories</span>
+            <h2>Loved by travellers across Canada</h2>
+          </div>
+        </div>
+        <div class="rv-grid">
+          <article class="rv">
+            <div class="stars" aria-label="5 out of 5"><svg>
+                <use href="#i-star" />
+              </svg><svg>
+                <use href="#i-star" />
+              </svg><svg>
+                <use href="#i-star" />
+              </svg><svg>
+                <use href="#i-star" />
+              </svg><svg>
+                <use href="#i-star" />
+              </svg></div>
+            <p>Our Tokyo flight was cancelled late at night. The team rebooked us and updated our hotels before we even
+              reached the airport desk. Calm, quick and professional.</p>
+            <div class="who">
+              <div class="av" style="background:#1A66D6">AS</div>
+              <div><b>Aanya Sharma</b><small>Japan, March 2026</small></div><span class="verified">Verified</span>
+            </div>
+          </article>
+          <article class="rv">
+            <div class="stars" aria-label="5 out of 5"><svg>
+                <use href="#i-star" />
+              </svg><svg>
+                <use href="#i-star" />
+              </svg><svg>
+                <use href="#i-star" />
+              </svg><svg>
+                <use href="#i-star" />
+              </svg><svg>
+                <use href="#i-star" />
+              </svg></div>
+            <p>We travelled to Bali with two kids and my parents. Every transfer was on time, and the villa had a cot
+              and a ground-floor room ready, exactly as we asked.</p>
+            <div class="who">
+              <div class="av" style="background:#0B1B33">RK</div>
+              <div><b>Ritu Khanna</b><small>Bali, June 2026</small></div><span class="verified">Verified</span>
+            </div>
+          </article>
+          <article class="rv">
+            <div class="stars" aria-label="5 out of 5"><svg>
+                <use href="#i-star" />
+              </svg><svg>
+                <use href="#i-star" />
+              </svg><svg>
+                <use href="#i-star" />
+              </svg><svg>
+                <use href="#i-star" />
+              </svg><svg>
+                <use href="#i-star" />
+              </svg></div>
+            <p>Honest advice with no upselling. They suggested a smaller resort and used the savings for a seaplane
+              flight. Best decision of our trip.</p>
+            <div class="who">
+              <div class="av" style="background:#4B8FE8">PM</div>
+              <div><b>Pranav Mehta</b><small>Maldives, August 2026</small></div><span class="verified">Verified</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ + CONTACT -->
+    <section id="faq" style="background:var(--bg)">
+      <div class="wrap faq-grid">
+        <div>
+          <span class="kicker"
+            style="color:var(--blue);font-weight:700;font-size:.9rem;display:inline-block;margin-bottom:8px">Questions</span>
+          <h2 style="font-size:clamp(1.9rem,3.4vw,2.7rem);font-weight:800;margin-bottom:28px">Things people ask before
+            booking</h2>
+          <details open>
+            <summary>How much do I pay to confirm a booking?</summary>
+            <p>A 25% deposit is required to confirm your booking. The balance is due 21 days before departure.</p>
+          </details>
+          <details>
+            <summary>Can I change my dates after booking?</summary>
+            <p>Yes. Date and hotel changes are free up to 21 days before departure, subject to availability. Airline
+              fare differences, if any, are passed on at cost.</p>
+          </details>
+          <details>
+            <summary>Do you help with visas?</summary>
+            <p>We guide you through documents and submit applications for Dubai, Thailand, Singapore and Schengen
+              countries. Final approval is decided by the embassy.</p>
+          </details>
+          <details>
+            <summary>What if something goes wrong during my trip?</summary>
+            <p>Call our 24/7 helpline. Your advisor and a local partner will rebook, reroute or arrange alternatives as
+              quickly as possible.</p>
+          </details>
+          <details>
+            <summary>Can you plan a trip around my budget?</summary>
+            <p>Yes. Share a budget range and we will suggest the best-value options, and tell you honestly where
+              spending more is worth it.</p>
+          </details>
+        </div>
+        <div class="contact" id="contact">
+          <h3>Get your free trip quote</h3>
+          <p>Share a few details below or call our quote hotline at <a href="tel:+13656558265"
+              style="color:var(--blue);font-weight:700">+1 365 655 8265</a>.</p>
+          <form id="enquiry" novalidate>
+            <div class="cg">
+              <div class="fld"><label for="c-name">Full name <span class="req">*</span></label><input id="c-name"
+                  autocomplete="name" placeholder="Your name"></div>
+              <div class="fld"><label for="c-phone">Phone number <span class="req">*</span></label><input id="c-phone"
+                  type="tel" autocomplete="tel" placeholder="+1"></div>
+              <div class="fld full"><label for="c-email">Email <span class="req">*</span></label><input id="c-email"
+                  type="email" autocomplete="email" placeholder="you@example.com"></div>
+              <div class="fld"><label for="c-dest">Destination</label>
+                <select id="c-dest">
+                  <option>Bali</option>
+                  <option>Dubai</option>
+                  <option>Maldives</option>
+                  <option>Thailand</option>
+                  <option>Switzerland</option>
+                  <option>Japan</option>
+                  <option>Greece</option>
+                  <option>Ladakh</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+              <div class="fld"><label for="c-month">Travel month</label><input id="c-month" type="month"></div>
+              <div class="fld full"><label for="c-note">Anything else?</label><textarea id="c-note" rows="3"
+                  placeholder="Special requests, dietary needs, must-see places…"></textarea></div>
+              <div class="full"><button class="btn btn-primary" type="submit" style="width:100%">Request free
+                  quote</button>
+                <div style="text-align:center;margin-top:10px;font-size:.85rem;color:var(--muted)">Or call directly for
+                  a quote: <a href="tel:+13656558265" style="color:var(--blue);font-weight:700">+1 365 655 8265</a>
+                </div>
+              </div>
+            </div>
+            <div class="msg" id="msg" role="status" aria-live="polite"></div>
+            <div class="secure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>Your details stay private and are never shared.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <div class="news" style="padding-top:84px">
+      <div class="wrap">
+        <div class="news-box">
+          <div>
+            <h3>Get travel deals in your inbox</h3>
+            <p>One short email a week. Unsubscribe anytime.</p>
+          </div>
+          <form class="news-form" id="news">
+            <input type="email" id="n-email" placeholder="Enter your email" aria-label="Email address" required>
+            <button class="btn btn-blue" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="foot">
+        <div>
+          <a href="#top" class="logo" aria-label="Sagar Travels">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <rect width="48" height="48" rx="14" fill="#1A66D6" />
+              <circle cx="24" cy="24" r="13" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="1.5" />
+              <ellipse cx="24" cy="24" rx="5.5" ry="13" fill="none" stroke="#fff" stroke-opacity=".35"
+                stroke-width="1.5" />
+              <path d="M12 24h24" stroke="#fff" stroke-opacity=".35" stroke-width="1.5" />
+              <path d="M33.5 13.5L27 29l-3-5-5-3 14.5-7.5z" fill="#BFE0FF" />
+              <path d="M27 29l-1.2 5.5-2.8-5.5" fill="#fff" fill-opacity=".9" />
+            </svg>
+            <span><b>Sagar</b><small>TRAVELS</small></span>
+          </a>
+          <p>Trusted holiday planners since 2012. Packages, flights and hotels with real people behind every booking.
+          </p>
+          <div class="pay">
+            <span>UPI</span><span>VISA</span><span>Mastercard</span><span>NetBanking</span><span>EMI</span>
+          </div>
+        </div>
+        <div>
+          <h4>Destinations</h4>
+          <ul>
+            <li><a href="#destinations">Bali</a></li>
+            <li><a href="#destinations">Dubai</a></li>
+            <li><a href="#destinations">Maldives</a></li>
+            <li><a href="#destinations">Switzerland</a></li>
+            <li><a href="#destinations">Japan</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#why">About us</a></li>
+            <li><a href="#process">How it works</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+13656558265" style="color:inherit;text-decoration:none">+1 365 655 8265</a></li>
+            <li>hello@sagartravels.example</li>
+            <li>Civil Lines, Prayagraj, Uttar Pradesh</li>
+            <li>Mon to Sat, 9 am to 8 pm</li>
+          </ul>
+        </div>
+      </div>
+      <div class="legal"><span>© 2026 Sagar Travels Pvt. Ltd. All rights reserved.</span><span>Privacy policy · Terms
+          · Cancellation policy</span></div>
+    </div>
+  </footer>
+
+  <!-- EMBED SCRIPT: paste your chat/widget embed code here -->
+
+  <script>
+    // Mobile menu
+    const burger = document.querySelector('.burger'), menu = document.getElementById('menu');
+    burger.addEventListener('click', () => { const o = menu.classList.toggle('open'); burger.setAttribute('aria-expanded', o) });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { menu.classList.remove('open'); burger.setAttribute('aria-expanded', 'false') }));
+
+    // Search tabs
+    const labels = { holiday: ['Travelling from', 'Going to', 'Departure', 'Search holidays'], flight: ['Flying from', 'Flying to', 'Departure date', 'Search flights'], hotel: ['City', 'Area', 'Check-in date', 'Search hotels'] };
+    document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
+      document.querySelectorAll('.tab').forEach(x => x.setAttribute('aria-selected', x === t));
+      const l = labels[t.dataset.t];
+      document.getElementById('l-from').textContent = l[0];
+      document.getElementById('l-to').textContent = l[1];
+      document.getElementById('l-date').textContent = l[2];
+      document.getElementById('s-btn').textContent = l[3];
+    }));
+    const d = new Date(); d.setDate(d.getDate() + 30);
+    document.getElementById('s-date').value = d.toISOString().slice(0, 10);
+
+    // Quick search -> contact form
+    function goContact(dest) {
+      const sel = document.getElementById('c-dest');
+      if ([...sel.options].some(o => o.value === dest)) sel.value = dest;
+      document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    document.getElementById('quick').addEventListener('submit', e => {
+      e.preventDefault();
+      const m = document.getElementById('s-date').value.slice(0, 7);
+      if (m) document.getElementById('c-month').value = m;
+      goContact(document.getElementById('s-to').value);
+    });
+    document.querySelectorAll('[data-dest]').forEach(b => b.addEventListener('click', e => { e.preventDefault(); goContact(b.dataset.dest) }));
+
+    // Filters
+    const pills = document.querySelectorAll('.pill'), cards = document.querySelectorAll('.card');
+    pills.forEach(p => p.addEventListener('click', () => {
+      pills.forEach(x => x.setAttribute('aria-pressed', x === p));
+      const f = p.dataset.f;
+      cards.forEach(c => c.classList.toggle('hide', f !== 'all' && !c.dataset.t.split(' ').includes(f)));
+    }));
+
+    // Save hearts
+    document.querySelectorAll('.c-heart').forEach(h => h.addEventListener('click', () => h.setAttribute('aria-pressed', h.getAttribute('aria-pressed') !== 'true')));
+
+    // Contact form (front-end only: connect to your backend or a form service)
+    document.getElementById('enquiry').addEventListener('submit', e => {
+      e.preventDefault();
+      const msg = document.getElementById('msg');
+      const name = document.getElementById('c-name'), phone = document.getElementById('c-phone'), email = document.getElementById('c-email');
+      const bad = [name, phone, email].find(x => !x.value.trim());
+      if (bad) { msg.className = 'msg err'; msg.textContent = 'Please fill in your name, phone and email so we can reach you.'; bad.focus(); return }
+      if (!/^\S+@\S+\.\S+$/.test(email.value)) { msg.className = 'msg err'; msg.textContent = 'Please enter a valid email address.'; email.focus(); return }
+      msg.className = 'msg ok'; msg.textContent = 'Thank you, ' + name.value.trim().split(' ')[0] + '. Your request is in. An advisor will contact you within 24 hours.';
+      e.target.reset();
+    });
+    document.getElementById('news').addEventListener('submit', e => {
+      e.preventDefault();
+      e.target.innerHTML = '<strong style="color:var(--navy)">You are subscribed. Watch your inbox for deals.</strong>';
+    });
+  </script>
+</body>
+
+</html>
